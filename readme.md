@@ -4,15 +4,32 @@
 create a branch, with a descriptive name. 
 The name should be in the following format: feature-gitusername, e.g. boardUnitTest-sigurdurKalman.
 
-syntax: **git checkout -m branchname**
+syntax: **git checkout -b branchname**
 
 ## 2. Commit changes like normally
 Use descriptive commit messages. If additional details are crucial, append brackets containing the details as such: "change (details)", e.g. "initial commit (source files and npm dependencies added)" 
 
 syntax: **git commit -m "commitmessage"**
 
-## 3. Create pull request
-visit https://github.com/ScrumGang/LateTermAssignment in your browser. 
+## 3. Push to your branch
+syntax: **git push -u origin branchname** 
+
+## 4. Create pull request
+visit https://github.com/ScrumGang/LateTermAssignment in your browser.
+
 Click *New pull request*.
-Set *base: master* and *compare: yourbranch*
+
+Set *base: master* and *compare: yourbranch*.
+
 Write a descriptive summary and click *Create pull request*.
+
+### Note: Minor changes can be merged directly to master
+syntax:
+
+**git checkout master**
+
+**git pull origin master**
+
+**git merge test**
+
+**git push origin master**
