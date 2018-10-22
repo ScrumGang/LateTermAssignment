@@ -24,6 +24,7 @@ Set *base: master* and *compare: yourbranch*.
 Write a descriptive summary and click *Create pull request*.
 
 ### Note: Minor changes can be merged directly to master
+<<<<<<< HEAD
 syntax:
 
 **git checkout master**
@@ -33,3 +34,10 @@ syntax:
 **git merge test**
 
 **git push origin master**
+=======
+syntax:__
+**git checkout master**__
+**git pull origin master**__
+**git merge test**__
+**git push origin master**__
+>>>>>>> 73f95f526c4bb609b25c9ad74cf4429002bbdf42
