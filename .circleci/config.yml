@@ -7,7 +7,7 @@ jobs: # a collection of steps
       - image: mongo:3.4.4 # and this image as the secondary service container
     branches:
       only:
-        - circleci-sigurdurKalman
+        - circleci-sigurdurKalman # set to only test circleci-sigurdurKalman branch
     steps: # a collection of executable commands 
       - checkout # special step to check out source code to working directory
       - run:
