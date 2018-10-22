@@ -24,7 +24,7 @@ Write a descriptive summary and click *Create pull request*.
 syntax:  
 **git checkout master**  
 **git pull origin master**  
-**git merge test**  
+**git merge branchname**  
 **git push origin master**
 
 ## 5. Remember to delete your branch after use
