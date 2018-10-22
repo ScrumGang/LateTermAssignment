@@ -1,0 +1,22 @@
+{
+  "name": "latetermassignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tictactoe.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScrumGang/LateTermAssignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScrumGang/LateTermAssignment/issues"
+  },
+  "homepage": "https://github.com/ScrumGang/LateTermAssignment#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
