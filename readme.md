@@ -15,21 +15,23 @@ syntax: **git commit -m "commitmessage"**
 syntax: **git push -u origin branchname** 
 
 ## 4. Create pull request
-visit https://github.com/ScrumGang/LateTermAssignment in your browser.
-
-Click *New pull request*.
-
-Set *base: master* and *compare: yourbranch*.
-
-Write a descriptive summary and click *Create pull request*.
+visit https://github.com/ScrumGang/LateTermAssignment in your browser.  
+Click *New pull request*.  
+Set *base: master* and *compare: yourbranch*.  
+Write a descriptive summary and click *Create pull request*.  
 
 ### Note: Minor changes can be merged directly to master
-syntax:
-
-**git checkout master**
-
-**git pull origin master**
-
-**git merge test**
-
+syntax:  
+**git checkout master**  
+**git pull origin master**  
+**git merge test**  
 **git push origin master**
+
+## 5. Remember to delete your branch after use
+After you've implemented the feature the branch was design for you should delete your branch.
+
+local branch:  
+syntax: **git branch -d branchname**
+
+remote branch:  
+syntax: **git push origin --delete branchname**
