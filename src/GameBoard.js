@@ -1,11 +1,11 @@
 //Example constructor that sets name equal to parameter
-function ScoreBoard(name) {
+function GameBoard(name) {
     this.name = name;
 }
 
 //Example function that returns "Hello, World!"
-ScoreBoard.method = function() {
+GameBoard.method = function() {
     return "Hello, World!";
 }
 
-module.exports = ScoreBoard;
+module.exports = GameBoard;
