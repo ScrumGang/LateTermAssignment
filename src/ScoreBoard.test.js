@@ -1,2 +1,2 @@
-var GameBoard = require('./ScoreBoard')
+var GameBoard = require('./ScoreBoard');
 //var method = ScoreBoard.method()
