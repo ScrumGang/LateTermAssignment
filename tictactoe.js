@@ -1,5 +1,5 @@
-function tictactoe() {
-	return "Hello, World!";
+module.exports = {
+	hello: function() {
+		return "Hello, World!";
+	}
 }
-
-module.exports = tictactoe;

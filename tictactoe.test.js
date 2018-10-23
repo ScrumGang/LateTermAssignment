@@ -1,5 +1,6 @@
-const tictactoe = require('./tictactoe');
+var Methods = require('./tictactoe');
+var hello = Methods.hello;
 
 test("Returns 'Hello, World!'", () => {
-	expect(tictactoe()).toBe("Hello, World!");
+	expect(hello()).toBe("Hello, World!");
 });
