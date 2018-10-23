@@ -1,4 +1,4 @@
-var Methods = require('./tictactoe');
+var Methods = require('./Tictactoe');
 var hello = Methods.hello;
 
 test("Returns 'Hello, World!'", () => {
