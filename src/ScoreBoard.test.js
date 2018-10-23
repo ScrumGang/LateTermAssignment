@@ -4,7 +4,7 @@ it('method should return hello world', () => {
     expect(ScoreBoard.method()).toBe("Hello, World!");
 });
 
-it('method should return flesi', () => {
+it('constructor should set name to foo', () => {
     const sb = new ScoreBoard("foo");
     expect(sb.name).toBe("foo");
 });
