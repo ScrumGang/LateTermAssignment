@@ -21,5 +21,14 @@ Tictactoe.prototype.takeInput = function(input) {
 		return false;
 	}
 }
+Tictactoe.prototype.showBoard = function() {
+	console.log(this.board.squares[0] + "|" + this.board.squares[1] + "|" + this.board.squares[2]);
+	console.log("- - -");
+	console.log(this.board.squares[3] + "|" + this.board.squares[4] + "|" + this.board.squares[5]);
+	console.log("- - -");
+	console.log(this.board.squares[6] + "|" + this.board.squares[7] + "|" + this.board.squares[8]);
+}
 
-module.exports = Tictactoe;
+const tic = new Tictactoe();
+tic.showBoard();
+//module.exports = Tictactoe;
