@@ -52,6 +52,16 @@ it('fillSquare should return false upon unsuccessful insertion', () => {
     expect(gb.fillSquare(5)).toBe(false);
 });
 
+// GameBoard.isFull() test
+it('isFull should return true if all squares are full (squaresFilled)', () => {
+    const gb = new GameBoard();
+    expect(gb.isFull()).toBe(false);
+    for(var i = 0; i < gb.squares.length; i++) {
+        gb.fillSquare(i + 1);
+    }
+    expect(gb.isFull()).toBe(true);
+});
+
 // GameBoard.clearBoard() test
 it('clearBoard should clear all squares', () => {
     const gb = new GameBoard();
