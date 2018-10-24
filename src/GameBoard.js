@@ -1,5 +1,8 @@
 //Constructor
 function GameBoard() {
+    //squaresFilled is initialized in clearBoard() call
+    //decleration is kept in comment for readability's sake
+    //this.squaresFilled = 0;
     this.squares = new Array(9);
     this.clearBoard();
 }
@@ -14,12 +17,21 @@ GameBoard.prototype.isValidInput = function(input) {
 GameBoard.prototype.fillSquare = function(input, sign) {
     if(this.isValidInput(input)) {
         this.squares[input - 1] = sign;
+        this.squaresFilled++;
+        return true;
+    }
+    return false;
+}
+
+GameBoard.prototype.isFull = function() {
+    if(this.squaresFilled === 9) {
         return true;
     }
     return false;
 }
 
 GameBoard.prototype.clearBoard = function() {
+    this.squaresFilled = 0;
     for(var i = 0; i < this.squares.length; i++) {
         this.squares[i] = " ";
     }
