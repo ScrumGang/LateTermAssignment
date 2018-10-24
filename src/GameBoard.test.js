@@ -51,3 +51,15 @@ it('fillSquare should return false upon unsuccessful insertion', () => {
     expect(gb.fillSquare(5)).toBe(true);
     expect(gb.fillSquare(5)).toBe(false);
 });
+
+//GameBoard.clearBoard() test
+it('clearBoard should clear all squares', () => {
+    const gb = new GameBoard();
+    for(var i = 0; i < gb.squares.length; i++) {
+        gb.squares[i] = "X";
+    }
+    gb.clearBoard();
+    for(var i = 0; i < gb.squares.length; i++) {
+        expect(gb.squares[i]).toBe(" ");
+    }
+});
