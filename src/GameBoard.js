@@ -39,6 +39,13 @@ GameBoard.prototype.isWinnerVertical = function(sign) {
     return false;
 }
 
+GameBoard.prototype.isWinnerDiagonal = function(sign) {
+    if(this.isThreeFilled(sign, 0, 4, 8) || this.isThreeFilled(sign, 2, 4, 6)) {
+        return true;
+    }
+    return false;
+}
+
 GameBoard.prototype.isThreeFilled = function(sign, index1, index2, index3) {
     if(this.squares[index1] === sign && this.squares[index2] === sign && this.squares[index3] === sign) {
         return true;

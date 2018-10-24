@@ -108,6 +108,21 @@ it('isWinnerVertical should return true if any column is full', () => {
     expect(gb.isWinnerVertical("X")).toBe(true);
 });
 
+// GameBoard.isWinnerDiagonal(sign) test
+it('isWinnerDiagonal should return true if any diagonal is full', () => {
+    const gb = new GameBoard();
+    expect(gb.isWinnerDiagonal("X")).toBe(false);
+    gb.squares[0] = "X";
+    gb.squares[4] = "X";
+    gb.squares[8] = "X";
+    expect(gb.isWinnerDiagonal("X")).toBe(true);
+    gb.squares[0] = " ";
+    expect(gb.isWinnerDiagonal("X")).toBe(false);
+    gb.squares[2] = "X";
+    gb.squares[6] = "X";
+    expect(gb.isWinnerDiagonal("X")).toBe(true);
+});
+
 // GameBoard.isThreeFilled(sign, index1, index2, index3) test
 it('Checks for three filled on all horizontal axis before and after filling them', () => {
     const gb = new GameBoard();
