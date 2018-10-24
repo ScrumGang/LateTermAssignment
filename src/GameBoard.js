@@ -26,28 +26,14 @@ GameBoard.prototype.clearBoard = function() {
 }
 
 GameBoard.prototype.isWinnerHorizontal = function(sign) {
-    if(this.isWinnerHorizontal1(sign) || this.isWinnerHorizontal2(sign) || this.isWinnerHorizontal3(sign)) {
+    if(this.isThreeFilled(sign, 0, 1, 2) || this.isThreeFilled(sign, 3, 4, 5) || this.isThreeFilled(sign, 6, 7, 8)) {
         return true;
     }
     return false;
 }
 
-GameBoard.prototype.isWinnerHorizontal1 = function(sign) {
-    if(this.squares[0] === sign && this.squares[1] === sign && this.squares[2] === sign) {
-        return true;
-    }
-    return false;
-}
-
-GameBoard.prototype.isWinnerHorizontal2 = function(sign) {
-    if(this.squares[3] === sign && this.squares[4] === sign && this.squares[5] === sign) {
-        return true;
-    }
-    return false;
-}
-
-GameBoard.prototype.isWinnerHorizontal3 = function(sign) {
-    if(this.squares[6] === sign && this.squares[7] === sign && this.squares[8] === sign) {
+GameBoard.prototype.isThreeFilled = function(sign, index1, index2, index3) {
+    if(this.squares[index1] === sign && this.squares[index2] === sign && this.squares[index3] === sign) {
         return true;
     }
     return false;
