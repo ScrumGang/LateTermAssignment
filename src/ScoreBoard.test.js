@@ -16,3 +16,11 @@ it('raiseWins(sign) should increment Xwins or Owins depending if sign is "X or "
     expect(sb.oWins).toBe(1);
 });
 
+it('clearScores should set xWins and Owins to 0', () => {
+    const sb = new ScoreBoard();
+    sb.raiseWins("X");
+    sb.raiseWins("O");
+    sb.clearScores();
+    expect(sb.xWins).toBe(0);
+    expect(sb.oWins).toBe(0);
+});
