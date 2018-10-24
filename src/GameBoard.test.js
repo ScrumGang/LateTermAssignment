@@ -27,3 +27,9 @@ it('isValidInput should return false if corresponding square is not empty', () =
     gb.sqaures[3] = "X";
     expect(gb.isValidInput(4)).toBe(false);
 });
+
+it('fillSquare should return fill square with parameter sign', () => {
+    const gb = new GameBoard();
+    gb.fillSqaure(5, "X");
+    expect(gb.sqaures[4]).toBe("X");
+});

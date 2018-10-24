@@ -13,4 +13,8 @@ GameBoard.prototype.isValidInput = function(input) {
     return false;
 }
 
+GameBoard.prototype.fillSqaure = function(input, sign) {
+    this.sqaures[input - 1] = sign;
+}
+
 module.exports = GameBoard;
