@@ -25,4 +25,11 @@ GameBoard.prototype.clearBoard = function() {
     }
 }
 
+GameBoard.prototype.isWinnerHorizontal1 = function(sign) {
+    if(this.squares[0] === sign && this.squares[1] === sign && this.squares[2] === sign) {
+        return true;
+    }
+    return false;
+}
+
 module.exports = GameBoard;
