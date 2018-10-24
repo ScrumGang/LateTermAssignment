@@ -1,10 +1,10 @@
 const GameBoard = require('./GameBoard');
 
-it('method should return hello world', () => {
-    expect(GameBoard.method()).toBe("Hello, World!");
+it('constructor should initialize an array of size 9, filled with whitespaces', () => {
+    const gb = new GameBoard();
+    expect(gb.sqaures[0]).toBe(" ");
 });
 
-it('constructor should set name to foo', () => {
-    const gb = new GameBoard("foo");
-    expect(gb.name).toBe("foo");
+it('method should return hello world', () => {
+    expect(GameBoard.method()).toBe("Hello, World!");
 });
