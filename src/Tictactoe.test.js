@@ -8,3 +8,9 @@ it('It should call Gameboard and create an empty gameboard', () => {
         expect(tic.board.squares[i]).toBe(" ");
     }
 });
+
+it('It should takeinput and put the X sign at the right place', () => {
+    const tic = new Tictactoe();
+	expect(tic.takeInput(1)).toBe(true);
+	expect(tic.board.squares[0]).toBe("X");
+});

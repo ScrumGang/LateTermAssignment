@@ -5,4 +5,21 @@ function Tictactoe() {
 	this.sign = 'X';
 }
 
+Tictactoe.prototype.takeInput = function(input) {
+	if(this.board.isValidInput(input)) {
+		if(this.board.fillSquare(input, this.sign)) {
+			if(this.sign == 'X') {
+				this.sign = 'O';
+			}
+			else {
+				this.sign = 'X';
+			}
+			return true;
+		}
+	}
+	else {
+		return false;
+	}
+}
+
 module.exports = Tictactoe;
