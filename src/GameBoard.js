@@ -1,21 +1,21 @@
 //Constructor
 function GameBoard() {
-    this.sqaures = new Array(9);
-    for(var i = 0; i < this.sqaures.length; i++) {
-        this.sqaures[i] = " ";
+    this.squares = new Array(9);
+    for(var i = 0; i < this.squares.length; i++) {
+        this.squares[i] = " ";
     }
 }
 
 GameBoard.prototype.isValidInput = function(input) {
-    if(input > 0 && input < 10 && this.sqaures[input - 1] === " ") {
+    if(input > 0 && input < 10 && this.squares[input - 1] === " ") {
         return true;
     }
     return false;
 }
 
-GameBoard.prototype.fillSqaure = function(input, sign) {
+GameBoard.prototype.fillSquare = function(input, sign) {
     if(this.isValidInput(input)) {
-        this.sqaures[input - 1] = sign;
+        this.squares[input - 1] = sign;
         return true;
     }
     return false;
