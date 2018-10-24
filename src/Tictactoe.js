@@ -38,11 +38,14 @@ Tictactoe.prototype.play = function() {
 		console.log("choose a number from 1-9");
 		readline.question("It's " + this.sign + " turn", (name) => {
 			this.takeInput(name);
-			if(!this.board.isWinner('X') && !this.board.isWinner('O')) {
+			if(!this.board.isWinner('X') && !this.board.isWinner('O') && !this.board.isFull()) {
 				this.play();
 			}
 			else {
-				if(this.board.isWinner('X')) {
+				if(this.board.isFull()) {
+					console.log("Draw");
+				}
+				else if(this.board.isWinner('X')) {
 					console.log('X won!');
 				}
 				else {
