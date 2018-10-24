@@ -7,7 +7,7 @@ function GameBoard() {
 }
 
 GameBoard.prototype.isValidInput = function(input) {
-    if(input > 0 && input < 10) {
+    if(input > 0 && input < 10 && this.sqaures[input - 1] === " ") {
         return true;
     }
     return false;
