@@ -1,4 +1,5 @@
 const GameBoard = require('./GameBoard');
+const ScoreBoard = require('./ScoreBoard');
 const readline = require('readline').createInterface({
 	input: process.stdin,
 	output: process.stdout
@@ -6,6 +7,7 @@ const readline = require('readline').createInterface({
 //Example constructor that sets name equal to parameter
 function Tictactoe() {
 	this.board = new GameBoard();
+	this.score = new ScoreBoard();
 	this.sign = 'X';
 }
 
@@ -34,6 +36,8 @@ Tictactoe.prototype.showBoard = function() {
 }
 
 Tictactoe.prototype.play = function() {
+		console.log("Scoreboard");
+		console.log("X: " + this.score.xWins + "-" + this.score.oWins + " :O");
 		this.showBoard();
 		console.log("choose a number from 1-9");
 		readline.question("It's " + this.sign + " turn", (name) => {
