@@ -39,4 +39,11 @@ GameBoard.prototype.isWinnerHorizontal2 = function(sign) {
     return false;
 }
 
+GameBoard.prototype.isWinnerHorizontal3 = function(sign) {
+    if(this.squares[6] === sign && this.squares[7] === sign && this.squares[8] === sign) {
+        return true;
+    }
+    return false;
+}
+
 module.exports = GameBoard;

@@ -83,3 +83,13 @@ it('isWinnerHorizontal2 should return true if square 0, 1 and 2 are filled', () 
     gb.squares[5] = "X";
     expect(gb.isWinnerHorizontal2("X")).toBe(true);
 });
+
+// GameBoard.isWinnerHorizontal3(sign) test
+it('isWinnerHorizontal3 should return true if square 0, 1 and 2 are filled', () => {
+    const gb = new GameBoard();
+    expect(gb.isWinnerHorizontal3("X")).toBe(false);
+    gb.squares[6] = "X";
+    gb.squares[7] = "X";
+    gb.squares[8] = "X";
+    expect(gb.isWinnerHorizontal3("X")).toBe(true);
+});
