@@ -42,3 +42,11 @@ it('fillSquare should return true upon successful insertion', () => {
         expect(gb.fillSqaure(i + 1)).toBe(true);
     }
 });
+
+it('fillSquare should return false upon unsuccessful insertion', () => {
+    const gb = new GameBoard();
+    expect(gb.fillSqaure(0)).toBe(false);
+    expect(gb.fillSqaure(10)).toBe(false);
+    expect(gb.fillSqaure(5)).toBe(true);
+    expect(gb.fillSqaure(5)).toBe(false);
+});
