@@ -33,3 +33,10 @@ it('fillSquare should return fill square with parameter sign', () => {
     gb.fillSqaure(5, "X");
     expect(gb.sqaures[4]).toBe("X");
 });
+
+it('fillSquare should return true upon successful insertion', () => {
+    const gb = new GameBoard();
+    for(var i = 0; i < gb.sqaures.length; i++) {
+        expect(gb.fillSqaure(i + 1)).toBe(true);
+    }
+});
