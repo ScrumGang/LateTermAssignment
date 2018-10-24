@@ -64,6 +64,28 @@ it('clearBoard should clear all squares', () => {
     }
 });
 
+// GameBoard.isWinnerHorizontal(sign) tests
+it('isWinnerHorizontal1 should return true if square 0, 1 and 2 are filled', () => {
+    const gb = new GameBoard();
+    expect(gb.isWinnerHorizontal("X")).toBe(false);
+    gb.squares[0] = "X";
+    gb.squares[1] = "X";
+    gb.squares[2] = "X";
+    expect(gb.isWinnerHorizontal("X")).toBe(true);
+    gb.squares[0] = " ";
+    expect(gb.isWinnerHorizontal("X")).toBe(false);
+    gb.squares[3] = "X";
+    gb.squares[4] = "X";
+    gb.squares[5] = "X";
+    expect(gb.isWinnerHorizontal("X")).toBe(true);
+    gb.squares[3] = " ";
+    expect(gb.isWinnerHorizontal("X")).toBe(false);
+    gb.squares[6] = "X";
+    gb.squares[7] = "X";
+    gb.squares[8] = "X";
+    expect(gb.isWinnerHorizontal("X")).toBe(true);
+});
+
 // GameBoard.isWinnerHorizontal1(sign) test
 it('isWinnerHorizontal1 should return true if square 0, 1 and 2 are filled', () => {
     const gb = new GameBoard();

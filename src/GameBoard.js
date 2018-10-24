@@ -25,6 +25,13 @@ GameBoard.prototype.clearBoard = function() {
     }
 }
 
+GameBoard.prototype.isWinnerHorizontal = function(sign) {
+    if(this.isWinnerHorizontal1(sign) || this.isWinnerHorizontal2(sign) || this.isWinnerHorizontal3(sign)) {
+        return true;
+    }
+    return false;
+}
+
 GameBoard.prototype.isWinnerHorizontal1 = function(sign) {
     if(this.squares[0] === sign && this.squares[1] === sign && this.squares[2] === sign) {
         return true;
