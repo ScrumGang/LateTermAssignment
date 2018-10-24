@@ -14,3 +14,11 @@ it('It should takeinput and put the X sign at the right place', () => {
 	expect(tic.takeInput(1)).toBe(true);
 	expect(tic.board.squares[0]).toBe("X");
 });
+
+it('It should takeinput and put the O sign at the right place after x has inserted first', () => {
+    const tic = new Tictactoe();
+	expect(tic.takeInput(1)).toBe(true);
+	expect(tic.board.squares[0]).toBe("X");
+	expect(tic.takeInput(2)).toBe(true);
+	expect(tic.board.squares[1]).toBe("O");
+});
