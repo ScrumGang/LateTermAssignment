@@ -50,9 +50,11 @@ Tictactoe.prototype.play = function() {
 					console.log("Draw");
 				}
 				else if(this.board.isWinner('X')) {
+					this.score.raiseWins('X');
 					console.log('X won!');
 				}
 				else {
+					this.score.raiseWins('O');
 					console.log('O won');
 				}
 			}
