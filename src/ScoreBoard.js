@@ -5,8 +5,14 @@ function ScoreBoard() {
 }
 
 //Example function that returns "Hello, World!"
-ScoreBoard.method = function(sign) {
-    return "Hello, World!";
+ScoreBoard.prototype.raiseWins = function(sign) {
+    
+    if(sign === "X") {
+        this.Xwins++;
+    }
+    else if(sign === "O") {
+        this.Owins++;
+    }
 }
 
 module.exports = ScoreBoard;
