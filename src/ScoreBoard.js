@@ -1,17 +1,17 @@
-//Example constructor that sets name equal to parameter
+//Constructor that initializes Xwins and Owins as 0
 function ScoreBoard() {
-    this.Xwins = 0;
-    this.Owins = 0;
+    this.xWins = 0;
+    this.oWins = 0;
 }
 
-//Example function that returns "Hello, World!"
+//Increments either Xwins or Owins depending if sign is "X" or "O"
 ScoreBoard.prototype.raiseWins = function(sign) {
     
     if(sign === "X") {
-        this.Xwins++;
+        this.xWins++;
     }
     else if(sign === "O") {
-        this.Owins++;
+        this.oWins++;
     }
 }
 
