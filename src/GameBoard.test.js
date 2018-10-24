@@ -64,6 +64,26 @@ it('clearBoard should clear all squares', () => {
     }
 });
 
+// GameBoard.isWinner(sign) tests
+it('isWinner should return true if any row is full', () => {
+    const gb = new GameBoard();
+    expect(gb.isWinner("X")).toBe(false);
+    gb.squares[0] = "X";
+    gb.squares[1] = "X";
+    gb.squares[2] = "X";
+    expect(gb.isWinner("X")).toBe(true);
+    gb.squares[0] = " ";
+    expect(gb.isWinner("X")).toBe(false);
+    gb.squares[5] = "X";
+    gb.squares[8] = "X";
+    expect(gb.isWinner("X")).toBe(true);
+    gb.squares[8] = " ";
+    expect(gb.isWinner("X")).toBe(false);
+    gb.squares[4] = "X";
+    gb.squares[6] = "X";
+    expect(gb.isWinner("X")).toBe(true);
+});
+
 // GameBoard.isWinnerHorizontal(sign) tests
 it('isWinnerHorizontal should return true if any row is full', () => {
     const gb = new GameBoard();

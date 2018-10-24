@@ -25,6 +25,13 @@ GameBoard.prototype.clearBoard = function() {
     }
 }
 
+GameBoard.prototype.isWinner = function(sign) {
+    if(this.isWinnerHorizontal(sign) || this.isWinnerVertical(sign) || this.isWinnerDiagonal(sign)) {
+        return true;
+    }
+    return false;
+}
+
 GameBoard.prototype.isWinnerHorizontal = function(sign) {
     if(this.isThreeFilled(sign, 0, 1, 2) || this.isThreeFilled(sign, 3, 4, 5) || this.isThreeFilled(sign, 6, 7, 8)) {
         return true;
