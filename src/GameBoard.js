@@ -1,9 +1,7 @@
 //Constructor
 function GameBoard() {
     this.squares = new Array(9);
-    for(var i = 0; i < this.squares.length; i++) {
-        this.squares[i] = " ";
-    }
+    this.clearBoard();
 }
 
 GameBoard.prototype.isValidInput = function(input) {
