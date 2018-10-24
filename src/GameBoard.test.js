@@ -30,8 +30,10 @@ it('isValidInput should return false if corresponding square is not empty', () =
 
 it('fillSquare should return fill square with parameter sign', () => {
     const gb = new GameBoard();
-    gb.fillSqaure(5, "X");
-    expect(gb.sqaures[4]).toBe("X");
+    for(var i = 0; i < gb.sqaures.length; i++) {
+        gb.fillSqaure(i + 1, "X");
+        expect(gb.sqaures[i]).toBe("X");
+    }
 });
 
 it('fillSquare should return true upon successful insertion', () => {
