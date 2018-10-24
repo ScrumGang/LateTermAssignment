@@ -1,10 +1,26 @@
 const ScoreBoard = require('./ScoreBoard');
 
-it('method should return hello world', () => {
-    expect(ScoreBoard.method()).toBe("Hello, World!");
+it('constructor should set Xwins and O wins to 0', () => {
+    const sb = new ScoreBoard();
+    expect(sb.xWins).toBe(0);
+    expect(sb.oWins).toBe(0);
 });
 
-it('constructor should set name to foo', () => {
-    const sb = new ScoreBoard("foo");
-    expect(sb.name).toBe("foo");
+it('raiseWins(sign) should increment Xwins or Owins depending if sign is "X or "O"', () => {
+    const sb = new ScoreBoard();
+    sb.raiseWins("X");
+    expect(sb.xWins).toBe(1);
+    expect(sb.oWins).toBe(0);
+    sb.raiseWins("O");
+    expect(sb.xWins).toBe(1);
+    expect(sb.oWins).toBe(1);
+});
+
+it('clearScores should set xWins and Owins to 0', () => {
+    const sb = new ScoreBoard();
+    sb.raiseWins("X");
+    sb.raiseWins("O");
+    sb.clearScores();
+    expect(sb.xWins).toBe(0);
+    expect(sb.oWins).toBe(0);
 });
