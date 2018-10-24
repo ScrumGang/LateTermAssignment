@@ -6,7 +6,3 @@ it('constructor should initialize an array of size 9, filled with whitespaces', 
         expect(gb.sqaures[i]).toBe(" ");
     }
 });
-
-it('method should return hello world', () => {
-    expect(GameBoard.method()).toBe("Hello, World!");
-});
