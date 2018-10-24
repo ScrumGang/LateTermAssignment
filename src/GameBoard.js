@@ -6,4 +6,11 @@ function GameBoard() {
     }
 }
 
+GameBoard.prototype.isValidInput = function(input) {
+    if(input > 0 && input < 10) {
+        return true;
+    }
+    return false;
+}
+
 module.exports = GameBoard;
