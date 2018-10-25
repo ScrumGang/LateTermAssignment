@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const api = require("./api/index");
+const api = require("./server/index");
 
 // Serve static files
 app.use(express.static(path.join(__dirname, "../", "dist")));
