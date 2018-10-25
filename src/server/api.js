@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const gameBoard = require("../client/index");
+const gameBoard = require("../logic/index");
 
 router.get("/", (req, res) => {
     res.status(405).send({ error: "GET method not allowed, try OPTIONS." });

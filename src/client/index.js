@@ -1,5 +1,8 @@
-function gameBoard(board) {
-    return board;
-}
+//const _ = require("lodash");
 
-module.exports = gameBoard;
+function component() {
+    let element = document.createElement('div');
+    element.innerHTML = "<strong> Hi there! </strong>"
+    return element;
+}
+document.body.appendChild(component());
