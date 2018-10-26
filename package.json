@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "doc": "jsdoc src/logic/*"
+    "doc": "jsdoc src/logic/* | open out/index.html"
   },
   "repository": {
     "type": "git",
