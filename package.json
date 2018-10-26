@@ -5,7 +5,8 @@
   "main": "tictactoe.js",
   "scripts": {
     "build": "webpack",
-    "test": "jest"
+    "test": "jest",
+    "doc": "jsdoc src/logic/*"
   },
   "repository": {
     "type": "git",
