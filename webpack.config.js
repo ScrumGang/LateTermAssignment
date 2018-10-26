@@ -18,5 +18,12 @@ module.exports = {
         proxy: {
             "/api": "http://localhost:8080"
         }
+    },
+    module: {
+        rules: [
+        {
+            test: /\.css$/,
+            use: [ 'style-loader', 'css-loader' ]
+        }]
     }
 }
