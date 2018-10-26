@@ -1,6 +1,3 @@
-function component() {
-    let element = document.createElement('div');
-    element.innerHTML = "<p><strong> Hi there! </strong></p>"
-    return element;
-}
-document.body.appendChild(component());
+require("../css/styles.css");
+var GameBoard = require("../logic/GameBoard");
+var ScoreBoard = require("../logic/ScoreBoard");
