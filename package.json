@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "doc": "jsdoc src/logic/*",
-    "openDoc": "open out/index.html"
+    "doc": "jsdoc ./src/logic/",
+    "opendoc": "open ./out/index.html"
   },
   "repository": {
     "type": "git",
