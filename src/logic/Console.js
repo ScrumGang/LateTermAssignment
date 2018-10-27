@@ -4,5 +4,4 @@ function Console() {
     this.tictactoe = new Tictactoe();
     this.tictactoe.play();
 }
-
 Console();
