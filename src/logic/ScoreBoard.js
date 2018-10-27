@@ -22,6 +22,18 @@ ScoreBoard.prototype.raiseWins = function(sign) {
 }
 
 /**
+ * returns either xWins or oWins depending on the parameter.
+ */
+ScoreBoard.prototype.getWins = function(symbol) {
+    if(symbol === "X") {
+        return this.xWins;
+    }
+    else if(symbol === "O") {
+        return this.oWins;
+    }
+}
+
+/**
  * Sets xWins and oWins to 0.
  */
 ScoreBoard.prototype.clearScores = function() {
