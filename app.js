@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "../", "dist")));
+app.use(express.static(path.join(__dirname, "./", "dist")));
 
 // Catch all other requests
 app.get("*", (req, res) => {
