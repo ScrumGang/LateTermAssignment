@@ -4,7 +4,7 @@ const iPhonex = devices["iPhone X"];
 
 describe("tictactoe-scrumgang.herokuapp.com", () => {
   let browser, page;
-  let url = "http://localhost:5000";
+  let url = "https://tictactoe-scrumgang.herokuapp.com/";
 
   beforeEach(async () => {
     browser = await puppeteer.launch({ headless: true, slowMo: 10 });
