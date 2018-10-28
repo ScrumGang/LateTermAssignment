@@ -55,7 +55,7 @@ Tictactoe.prototype.showBoard = function() {
  * Sets the current player as 'X' and clears the game board and the score board
  */
 Tictactoe.prototype.startNewGame = function() {
-	readline.question("Would you like to start a new game? (y/n)", (input) => {
+	readline.question("Would you like to start a new game? (y/n): ", (input) => {
 		if(input != 'y' && input != 'n') {
 			this.startNewGame();
 		}
@@ -67,6 +67,8 @@ Tictactoe.prototype.startNewGame = function() {
 			}
 			else {
 				console.log("Goodbye");
+				console.log("X: " + this.scoreBoard.xWins + "-" + this.scoreBoard.oWins + " :O");
+				readline.close();
 			}
 		}
 	})
@@ -77,30 +79,33 @@ Tictactoe.prototype.startNewGame = function() {
  * If either player wins raise either xWins og oWins in the score board depending if 'X' or 'O' won.
  */
 Tictactoe.prototype.play = function() {
-		console.log("Scoreboard");
-		console.log("X: " + this.scoreBoard.xWins + "-" + this.scoreBoard.oWins + " :O");
-		this.showBoard();
-		console.log("choose a number from 1-9");
-		readline.question("It's " + this.sign + " turn", (input) => {
-			this.takeInput(input);
-			if(!this.gameBoard.isWinner('X') && !this.gameBoard.isWinner('O') && !this.gameBoard.isFull()) {
-				this.play();
-			}
-			else {
-				if(this.gameBoard.isFull()) {
-					console.log("Draw");
-				}
-				else if(this.gameBoard.isWinner('X')) {
-					this.scoreBoard.raiseWins('X');
-					console.log('X won!');
-				}
-				else {
-					this.scoreBoard.raiseWins('O');
-					console.log('O won');
-				}
+	console.log("Scoreboard");
+	console.log("X: " + this.scoreBoard.xWins + "-" + this.scoreBoard.oWins + " :O");
+	this.showBoard();
+	console.log("choose a number from 1-9");
+	readline.question("It's " + this.sign + " turn: ", (input) => {
+		if(this.takeInput(input)){
+			if(this.gameBoard.isWinner('X')) {
+				this.scoreBoard.raiseWins('X');
+				console.log('X won!');
 				this.startNewGame();
 			}
-		  })
+			else if(this.gameBoard.isWinner('O')){
+				this.scoreBoard.raiseWins('O');
+				console.log('O won');
+				this.startNewGame();
+			}
+			else if(this.gameBoard.isFull()) {
+				console.log("Draw");
+				this.startNewGame();
+			}
+			else{
+				this.play();
+			}
+		} else {
+			this.play();
+		}
+	})
 }
 
 /*const tic = new Tictactoe();
