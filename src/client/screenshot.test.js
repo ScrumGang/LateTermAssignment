@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const devices = require("puppeteer/DeviceDescriptors");
 const iPhonex = devices["iPhone X"];
 
-describe("Google screenshots", () => {
+describe("tictactoe-scrumgang.herokuapp.com screenshots", () => {
   let browser, page;
   let url = "https://tictactoe-scrumgang.herokuapp.com/";
 
