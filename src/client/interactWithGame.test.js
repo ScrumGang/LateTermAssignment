@@ -15,6 +15,12 @@ describe("tictactoe-scrumgang.herokuapp.com", () => {
     browser.close();
   });
 
+  test("Server responds with 200 status code", async () => {
+    const response = await page.goto(url);
+    // Check that the server responds with a 200 status message
+    await expect(response.status()).toBe(200);
+  });
+
   test("Testing tictactoe functionality", async () => {
     await page.goto(url);
     await page.setViewport({ width: 1440, height: 800 });
