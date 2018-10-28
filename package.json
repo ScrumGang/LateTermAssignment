@@ -6,8 +6,7 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "doc": "jsdoc ./src/logic/",
-    "opendoc": "open ./out/index.html",
+    "doc": "jsdoc ./src/logic/ -d docs/JSDocs",
     "deploy": "git push heroku master"
   },
   "repository": {

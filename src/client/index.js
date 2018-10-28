@@ -7,7 +7,7 @@ var leftScoreBoard = document.getElementById("left-scoreboard");
 var rightScoreBoard = document.getElementById("right-scoreboard");
 var moveAnnouncer = document.getElementById("move-announcer");
 var resetButton = document.getElementById("reset-button");
-var currentSymbol = "X";
+var currentSign = "X";
 var gameOver = false;
 
 var gameBoard = new GameBoard();
@@ -15,19 +15,19 @@ var scoreBoard = new ScoreBoard();
 
 Array.prototype.forEach.call(squares, function(square) {
     square.addEventListener("click", function() {
-        if(!gameOver && gameBoard.fillSquare(parseInt(square.getAttribute("id")), currentSymbol)) {
-            square.innerHTML = currentSymbol;
-            if(gameBoard.squaresFilled > 4 && gameBoard.isWinner(currentSymbol)) {
-                raiseWins(currentSymbol)
+        if(!gameOver && gameBoard.fillSquare(parseInt(square.getAttribute("id")), currentSign)) {
+            square.innerHTML = currentSign;
+            if(gameBoard.squaresFilled > 4 && gameBoard.isWinner(currentSign)) {
+                raiseWins(currentSign)
             }
             else if(gameBoard.isFull()) {
                 setDraw();
             }
-            else if(currentSymbol === "X") {
-                setCurrentSymbol("O")
+            else if(currentSign === "X") {
+                setcurrentSign("O")
             }
-            else if(currentSymbol === "O") {
-                setCurrentSymbol("X");
+            else if(currentSign === "O") {
+                setcurrentSign("X");
             }
         }
     });
@@ -39,18 +39,18 @@ resetButton.addEventListener("click", function() {
         square.innerHTML = "";
     });
     gameOver = false;
-    setCurrentSymbol("X");
+    setcurrentSign("X");
 });
 
-function raiseWins(symbol) {
+function raiseWins(sign) {
     gameOver = true;
-    scoreBoard.raiseWins(symbol);
-    moveAnnouncer.innerHTML = symbol + " wins!";
-    if(symbol === "X") {
-        leftScoreBoard.innerHTML = symbol + " has " + scoreBoard.getWins(symbol) + " point/s!";
+    scoreBoard.raiseWins(sign);
+    moveAnnouncer.innerHTML = sign + " wins!";
+    if(sign === "X") {
+        leftScoreBoard.innerHTML = sign + " has " + scoreBoard.getWins(sign) + " point/s!";
     }
-    else if(symbol === "O") {
-        rightScoreBoard.innerHTML = symbol + " has " + scoreBoard.getWins(symbol) + " point/s!";
+    else if(sign === "O") {
+        rightScoreBoard.innerHTML = sign + " has " + scoreBoard.getWins(sign) + " point/s!";
     }
 }
 
@@ -59,7 +59,7 @@ function setDraw() {
     moveAnnouncer.innerHTML = "Draw!";
 }
 
-function setCurrentSymbol(symbol) {
-    currentSymbol = symbol;
-    moveAnnouncer.innerHTML = String(symbol) + ", it's your turn!";
+function setcurrentSign(sign) {
+    currentSign = sign;
+    moveAnnouncer.innerHTML = String(sign) + ", it's your turn!";
 }
