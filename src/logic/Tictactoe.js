@@ -103,6 +103,6 @@ Tictactoe.prototype.play = function() {
 		  })
 }
 
-const tic = new Tictactoe();
-tic.play();
+/*const tic = new Tictactoe();
+tic.play();*/
 module.exports = Tictactoe;
