@@ -7,7 +7,7 @@ describe("tictactoe-scrumgang.herokuapp.com", () => {
   let url = "https://tictactoe-scrumgang.herokuapp.com/";
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({ headless: true, slowMo: 10 });
+    browser = await puppeteer.launch({ headless: true, slowMo: 0 });
     page = await browser.newPage();
   });
 
