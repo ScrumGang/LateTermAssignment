@@ -7,6 +7,7 @@ const readline = require('readline').createInterface({
 
 /**
  * Tictactoe constructor that intializes the starting player a 'X' and initalizes an empty game board and score board.
+ * atli að documenta.
  * @constructor
  * @property {GameBoard} gameBoard - Represents the tic tac toe gameboard.
  * @property {ScoreBoard} scoreBoard - Represents the tic tac toe scoreboard.
